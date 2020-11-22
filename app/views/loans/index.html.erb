@@ -1,0 +1,43 @@
+
+
+<h1>Loans</h1>
+
+
+<br>
+<table class="table table-striped table-bordered table-hover">
+<thead class="thead-dark">
+<tr>
+<th>Id de Usuario</th>
+<th>Usuario</th>
+<th>Libro</th>
+<th>Fecha de Inicio</th>
+<th>Fecha de Finalizacion</th>
+<th>Estado</th>
+<th colspan="3"></th>
+</tr>
+</thead>
+<tbody>
+<% @loans.each do |loan| %>
+  <tr>
+  <td><%= link_to loan.id, loan %></td>
+  <td><%= user_email(loan) %></td>
+  <td><%= link_to book_title(loan), book_path(loan.book_id) %></td>
+  <td><%= loan.loan_start %></td>
+  <td><%= loan.loan_finish %></td>
+  <td><%= loan.state %></td>
+  <% if user_signed_in? %>
+        <td><%= link_to 'Show', loan %></td>
+        <td><%= link_to 'Edit', edit_loan_path(loan) %></td>
+        <td><%= link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% else %>
+        <td></td>
+        <td></td>
+        <td></td>
+  <% end %>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+
+<%= link_to 'New Loan', new_loan_path %>

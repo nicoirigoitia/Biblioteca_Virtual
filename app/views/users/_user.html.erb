@@ -1,0 +1,9 @@
+
+
+<% if current_user.admin == true %>
+  <% @users.each do |user| %>
+    <%= user.email %>
+    <%= link_to "delete", user, class:'btn btn-secondary', method: :delete, data: { confirm: "Are you sure"} %><br> <br>   
+  <% end %>
+  <%= link_to "create new user", new_user_path, class:'btn btn-secondary' %><br>
+<% end %>
