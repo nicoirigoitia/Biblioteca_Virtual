@@ -1,10 +1,13 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index]
+
   # GET /books
   # GET /books.json
   def index
     @books = Book.all
+    @users = User.all
+    @loans = Loan.all
   end
 
   # GET /books/1
@@ -19,6 +22,10 @@ class BooksController < ApplicationController
 
   # GET /books/1/edit
   def edit
+    if current_user.authorized?
+    else
+      redirect_to root_path, notice: 'No estas autorizado'
+    end
   end
 
   # POST /books
@@ -40,15 +47,20 @@ class BooksController < ApplicationController
   # PATCH/PUT /books/1
   # PATCH/PUT /books/1.json
   def update
-    respond_to do |format|
-      if @book.update(book_params)
-        format.html { redirect_to @book, notice: 'Book was successfully updated.' }
-        format.json { render :show, status: :ok, location: @book }
-      else
-        format.html { render :edit }
-        format.json { render json: @book.errors, status: :unprocessable_entity }
+
+
+      respond_to do |format|
+        if @book.update(book_params)
+          format.html { redirect_to @book, notice: 'Book was successfully updated.' }
+          format.json { render :show, status: :ok, location: @book }
+        else
+          format.html { render :edit }
+          format.json { render json: @book.errors, status: :unprocessable_entity }
+        end
       end
-    end
+    
+      
+   
   end
 
   # DELETE /books/1

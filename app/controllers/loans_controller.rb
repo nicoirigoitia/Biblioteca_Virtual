@@ -63,7 +63,7 @@ class LoansController < ApplicationController
     end
   end
 
- 
+  
   
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -73,7 +73,7 @@ class LoansController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def loan_params
-      params.require(:loan).permit(:user_id, :book_id, :loan_start, :loan_finish, :state)
+      params.require(:loan).permit(:user_id, :book_id, :book_title, :user_email, :loan_start, :loan_finish, :state)
     end
 
 

@@ -19,13 +19,13 @@
 <tbody>
 <% @loans.each do |loan| %>
   <tr>
-  <td><%= link_to loan.id, loan %></td>
+  <td><%= link_to loan.user_id, loan %></td>
   <td><%= user_email(loan) %></td>
   <td><%= link_to book_title(loan), book_path(loan.book_id) %></td>
   <td><%= loan.loan_start %></td>
   <td><%= loan.loan_finish %></td>
   <td><%= loan.state %></td>
-  <% if user_signed_in? %>
+   <% if current_user.present? && current_user.authorized? %>
         <td><%= link_to 'Show', loan %></td>
         <td><%= link_to 'Edit', edit_loan_path(loan) %></td>
         <td><%= link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td>

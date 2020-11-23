@@ -10,21 +10,10 @@
       
       <li class="nav-item">
         <%= link_to "Contacto", home_about_path, class:"nav-link" %>
-      </li>
-      <li class="nav-item">
-      <%= link_to "Libros", books_path, class:"nav-link" %>
-      </li>
-      
-     
-
-      
-
+      </li>     
+    
       <% if user_signed_in? %>
-       
-        <li class="nav-item">
-          <%= link_to "Agregar libro", new_book_path, class:"nav-link" %>
-        </li>
-        
+                     
         <li class="nav-item">
         <%= link_to "Prestamos", loans_path, class:"nav-link" %>
         </li>
@@ -33,14 +22,21 @@
           <%= link_to "Editar Perfil", edit_user_registration_path, class:"nav-link" %>
         </li>
 
+        
+        <% if current_user.authorized? %>
+          <li class="nav-item">
+            <%= link_to "Usuarios", users_path, class:"nav-link" %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to "Agregar libro", new_book_path, class:"nav-link" %>
+          </li>
+        <% end %>
+    
         <li class="nav-item">
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link" %>
         </li>
-        <% if current_user.admin? %>
-          <li class="nav-item">
-            <%= link_to "Crear Nuevo Usuario", new_user_path, class:"nav-link" %>
-          </li>
-        <% end %>
+
       <% else %>
 
       
