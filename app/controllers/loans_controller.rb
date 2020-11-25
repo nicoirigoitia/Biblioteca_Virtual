@@ -21,6 +21,9 @@ class LoansController < ApplicationController
 
   # GET /loans/1/edit
   def edit
+    unless current_user.authorized?
+      redirect_to root_path, notice: 'No estas autorizado'
+    end
   end
 
   # POST /loans

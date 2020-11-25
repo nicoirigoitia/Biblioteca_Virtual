@@ -22,8 +22,7 @@ class BooksController < ApplicationController
 
   # GET /books/1/edit
   def edit
-    if current_user.authorized?
-    else
+    unless current_user.authorized?
       redirect_to root_path, notice: 'No estas autorizado'
     end
   end

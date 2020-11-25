@@ -1,9 +1,24 @@
-
-
-<% if current_user.admin == true %>
-  <% @users.each do |user| %>
-    <%= user.email %>
-    <%= link_to "delete", user, class:'btn btn-secondary', method: :delete, data: { confirm: "Are you sure"} %><br> <br>   
+<h1>Usuarios</h1>
+<br>
+<table class="table table-striped table-bordered table-hover">
+<thead class="thead-dark">
+<tr>
+<th>Email</th>
+<th colspan="1"></th>
+</tr>
+</thead>
+<tbody>
+  <% if current_user.admin == true %>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= link_to "delete", user, class:'btn btn-secondary', method: :delete, data: { confirm: "Are you sure"} %></td> 
+      </tr>
+    <% end %>
+  
+   
   <% end %>
-  <%= link_to "create new user", new_user_path, class:'btn btn-secondary' %><br>
-<% end %>
+</tbody>
+</table>
+<br>
+ <%= link_to "create new user", new_user_path, class:'btn btn-secondary' %><br>
