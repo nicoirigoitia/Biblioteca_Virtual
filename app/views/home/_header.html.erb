@@ -8,12 +8,14 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       
-      <li class="nav-item">
-        <%= link_to "Contacto", home_about_path, class:"nav-link" %>
-      </li>     
     
       <% if user_signed_in? %>
-                     
+
+         
+        <li class="nav-item">
+        <%= link_to "Contacto", home_about_path, class:"nav-link" %>
+        </li> 
+                    
         <li class="nav-item">
         <%= link_to "Prestamos", loans_path, class:"nav-link" %>
         </li>
@@ -21,8 +23,7 @@
         <li class="nav-item">
           <%= link_to "Editar Perfil", edit_user_registration_path, class:"nav-link" %>
         </li>
-
-        
+  
         <% if current_user.authorized? %>
           <li class="nav-item">
             <%= link_to "Usuarios", users_path, class:"nav-link" %>
@@ -41,6 +42,9 @@
 
       
         
+      <li class="nav-item">
+        <%= link_to "Contacto", home_about_path, class:"nav-link" %>
+      </li>     
      
         <li class="nav-item">
           <%= link_to "Loguearse", new_user_session_path, class:"nav-link" %>
