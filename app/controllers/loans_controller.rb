@@ -17,13 +17,20 @@ class LoansController < ApplicationController
   # GET /loans/new
   def new
     @loan = Loan.new
+    @users = User.all
+    @books = Book.all.select { |book| book.loans? }
+
   end
 
   # GET /loans/1/edit
   def edit
-    unless current_user.authorized?
+    if current_user.authorized?
+      @users = User.all
+      @books = Book.all.select { |book| book.loans? }
+    else  
       redirect_to root_path, notice: 'No estas autorizado'
     end
+
   end
 
   # POST /loans

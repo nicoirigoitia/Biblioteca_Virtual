@@ -19,7 +19,8 @@
   <strong>Published at:</strong>
   <%= @book.published_at %>
 </p>
-
+<% if current_user.authorized? %>
 <%= link_to 'Edit', edit_book_path(@book) %> |
+<%end%> 
 <%= link_to 'Back', books_path %> |
 <%= link_to 'Reservar', new_loan_path%>

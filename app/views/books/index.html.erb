@@ -25,26 +25,21 @@
   <td><%= book.isbn %></td>
   <td><%= book.published_at %></td>
   <td><%= link_to 'Show', book %></td>
-  <% if current_user.present? && current_user.authorized? %>
-        
+
+  <% if current_user.present? && current_user.authorized? %>      
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   <% end %>
       </tr>
 <% end %>
-    </tbody>
-  </table>
-
-  <br>
-
-  <% if current_user.present? && (current_user.admin? || current_user.is_biblio?) %>
-    <%= link_to 'New Book', new_book_path, class:"btn btn-secondary" %>
-  <% end %>
-  
-
-
-  <br>
-  <br>
-  <% if current_user %>
-      <%= current_user.email %>
-  <% end %>
+</tbody>
+</table>
+<br>
+<% if current_user.present? && (current_user.admin? || current_user.is_biblio?) %>
+  <%= link_to 'New Book', new_book_path, class:"btn btn-secondary" %>
+<% end %>
+<br>
+<br>
+<% if current_user %>
+    <%= current_user.email %>
+<% end %>
