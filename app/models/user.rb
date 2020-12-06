@@ -6,11 +6,20 @@ devise :database_authenticatable, :registerable,
     has_many :loans, dependent: :destroy
     has_many :books, through: :loans
 
-  def is_biblio?
-    self.role == 'bibliotecario'
-  end
+    validates_length_of :loans, maximum: 2, :on => :create
+    validates_length_of :loans, maximum: 3, :on => :update
 
-  def authorized?
-    self.is_biblio? || self.admin? 
-  end
+
+    def is_biblio?
+      self.role == 'bibliotecario'
+    end
+
+    def authorized?
+      self.is_biblio? || self.admin? 
+    end
+
+    def valid_amount_of_loans?
+      self.loans.count < 3
+    end
+
 end

@@ -14,7 +14,6 @@
 
 
   <div class="form-group">
-
     <% if current_user.is_biblio? %>
       <% f.label :role %><br />
       <%= f.select :role, options_for_select(['estudiante']), {}, class: "form-control" %>
@@ -27,6 +26,16 @@
   <div class="field form-group">
     <% f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control", placeholder:"Email" %>
+  </div>
+
+  <div class="field form-group">
+    <% f.label :name %><br />
+    <%= f.text_field :name, autocomplete: "name", class:"form-control", placeholder:"Nombre" %>
+  </div>
+
+  <div class="field form-group">
+    <% f.label :lastname %><br />
+    <%= f.text_field :lastname, autocomplete: "lastname", class:"form-control", placeholder:"Apellido" %>
   </div>
 
   <div class="field form-group">
@@ -43,8 +52,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up", class: 
-    "btn btn-secondary" %>
+   <%= f.submit class:'btn btn-secondary' %>
   <br>
 <% end %>
 

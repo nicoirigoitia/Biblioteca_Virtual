@@ -7,5 +7,8 @@ class Book < ApplicationRecord
     def loans?
         self.loans.empty?
     end
-   
+    
+    def full_title_id
+        "#{self.try(:title)} - (#{self.try(:id)})"
+    end
 end

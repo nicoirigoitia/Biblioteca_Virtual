@@ -15,17 +15,13 @@
 
   <div class="form-group">
     <% if current_user.authorized? %>
-      <% usuario = @users.map { |user| [user.email, user.id] } %>
-      <%= form.select :user_id, options_for_select(usuario), {}, class: "form-control" %>
-    <% else %>  
-        
-      <%= form.text_field :user_id, class:"form-control", placeholder:"user_id", value:"#{current_user.id}" %>
+      <%= form.select :user_id, options_for_select(@user_edit_list), {}, class: "form-control" %>
+    <% else %>         
+      <% form.text_field :user_id, class:"form-control", placeholder:"#{current_user.email}", value:"#{current_user.id}" %>
     <% end %>    
   </div>
-
   <div class="field form-group">
-    <% book = @books.map { |book| [book.title, book.id] } %>
-    <%= form.select :book_id, options_for_select(book), {}, class: "form-control" %>  
+      <%= form.select :book_id, options_for_select(@book_edit_list), {}, class: "form-control" %> 
   </div>
 
     <div class="field form-group">

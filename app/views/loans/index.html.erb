@@ -7,7 +7,7 @@
 <table class="table table-striped table-bordered table-hover">
 <thead class="thead-dark">
 <tr>
-<th>Loan Id</th>
+<th>ID Prestamo</th>
 <th>Usuario</th>
 <th>Libro</th>
 <th>Fecha de Inicio</th>
@@ -24,13 +24,13 @@
     
     <td><%= link_to loan.id, loan %></td>
     <td><%= user_email(loan) %></td>
-    <td><%= loan.loan_start %></td>
     <td><%= link_to book_title(loan), book_path(loan.book_id) %></td>
+    <td><%= loan.loan_start %></td>
     <td><%= loan.loan_finish %></td>
     <td><%= loan.state %></td>
-    <td><%= link_to 'Show', loan %></td>
-    <td><%= link_to 'Edit', edit_loan_path(loan) %></td>
-    <td><%= link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Ver', loan, class:"btn btn-outline-primary" %></td>
+    <td><%= link_to 'Editar', edit_loan_path(loan), class:"btn btn-outline-primary" %></td>
+    <td><%= link_to 'Borrar', loan, class:'btn btn-outline-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 <%else%>
@@ -43,7 +43,7 @@
         <td><%= loan.loan_start %></td>
         <td><%= loan.loan_finish %></td>
         <td><%= loan.state %></td>
-        <td><%= link_to 'Show', loan %></td>
+        <td><%= link_to 'Ver', loan, class:"btn btn-outline-primary" %></td>
       </tr>
       <%end%>
     <%end%>
@@ -52,4 +52,4 @@
 </table>
 
 
-<%= link_to 'New Loan', new_loan_path %>
+<%= link_to 'New Loan', new_loan_path, class:"btn btn-secondary" %>
