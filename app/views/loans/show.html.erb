@@ -1,0 +1,32 @@
+<p>
+  <strong>Book Title:</strong>
+  <%= @loan.book.title %>
+</p>
+
+<p>
+  <strong>Loan Start:</strong>
+  <%= @loan.loan_start %>
+</p>
+
+<p>
+  <strong>Book ID:</strong>
+  <%= @loan.book_id %>
+</p>
+
+<p>
+  <strong>Loan ID:</strong>
+  <%= @loan.id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @loan.user.email %>
+</p>
+
+
+<% if current_user.authorized? %>
+ <%= link_to 'Editar', edit_loan_path(@loan), class:"btn btn-outline-primary" %> |
+<%end%> 
+
+
+<%= link_to 'Volver', loans_path, class:"btn btn-outline-primary" %>

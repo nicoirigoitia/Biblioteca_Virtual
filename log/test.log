@@ -1,0 +1,280 @@
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (13.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (65.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "books";
+DELETE FROM "loans";
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.513644', '2020-12-07 01:29:18.513644');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.513644', '2020-12-07 01:29:18.513644');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.518182', '2020-12-07 01:29:18.518182');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.518182', '2020-12-07 01:29:18.518182');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.520585', '2020-12-07 01:29:18.520585');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.520585', '2020-12-07 01:29:18.520585')[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (2.5ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "books";
+DELETE FROM "loans";
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.534507', '2020-12-07 01:29:18.534507');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.534507', '2020-12-07 01:29:18.534507');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.534621', '2020-12-07 01:29:18.534621');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.534621', '2020-12-07 01:29:18.534621');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.536540', '2020-12-07 01:29:18.536540');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.536540', '2020-12-07 01:29:18.536540')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (8.4ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "books";
+DELETE FROM "loans";
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.540475', '2020-12-07 01:29:18.540475');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.540475', '2020-12-07 01:29:18.540475');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.540557', '2020-12-07 01:29:18.540557');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.540557', '2020-12-07 01:29:18.540557');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.541439', '2020-12-07 01:29:18.541439');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.541439', '2020-12-07 01:29:18.541439')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "books";
+DELETE FROM "loans";
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.526621', '2020-12-07 01:29:18.526621');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.526621', '2020-12-07 01:29:18.526621');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.526743', '2020-12-07 01:29:18.526743');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.526743', '2020-12-07 01:29:18.526743');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.526840', '2020-12-07 01:29:18.526840');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.526840', '2020-12-07 01:29:18.526840')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "books";
+DELETE FROM "loans";
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.707660', '2020-12-07 01:29:18.707660');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.707660', '2020-12-07 01:29:18.707660');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.707771', '2020-12-07 01:29:18.707771');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.707771', '2020-12-07 01:29:18.707771');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.707852', '2020-12-07 01:29:18.707852');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.707852', '2020-12-07 01:29:18.707852')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "books";
+DELETE FROM "loans";
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.711255', '2020-12-07 01:29:18.711255');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.711255', '2020-12-07 01:29:18.711255');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.711346', '2020-12-07 01:29:18.711346');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.711346', '2020-12-07 01:29:18.711346');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.711439', '2020-12-07 01:29:18.711439');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.711439', '2020-12-07 01:29:18.711439')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "books";
+DELETE FROM "loans";
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.722599', '2020-12-07 01:29:18.722599');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.722599', '2020-12-07 01:29:18.722599');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.722720', '2020-12-07 01:29:18.722720');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.722720', '2020-12-07 01:29:18.722720');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.722815', '2020-12-07 01:29:18.722815');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.722815', '2020-12-07 01:29:18.722815')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "books";
+DELETE FROM "loans";
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.732296', '2020-12-07 01:29:18.732296');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.732296', '2020-12-07 01:29:18.732296');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.732411', '2020-12-07 01:29:18.732411');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.732411', '2020-12-07 01:29:18.732411');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.732511', '2020-12-07 01:29:18.732511');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.732511', '2020-12-07 01:29:18.732511')[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "books";
+DELETE FROM "loans";
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.730683', '2020-12-07 01:29:18.730683');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.730683', '2020-12-07 01:29:18.730683');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.730828', '2020-12-07 01:29:18.730828');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.730828', '2020-12-07 01:29:18.730828');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.730953', '2020-12-07 01:29:18.730953');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.730953', '2020-12-07 01:29:18.730953')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "books";
+DELETE FROM "loans";
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.740998', '2020-12-07 01:29:18.740998');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.740998', '2020-12-07 01:29:18.740998');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.741087', '2020-12-07 01:29:18.741087');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.741087', '2020-12-07 01:29:18.741087');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.741164', '2020-12-07 01:29:18.741164');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.741164', '2020-12-07 01:29:18.741164')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "books";
+DELETE FROM "loans";
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.749503', '2020-12-07 01:29:18.749503');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.749503', '2020-12-07 01:29:18.749503');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.749641', '2020-12-07 01:29:18.749641');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.749641', '2020-12-07 01:29:18.749641');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.749830', '2020-12-07 01:29:18.749830');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.749830', '2020-12-07 01:29:18.749830')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "books";
+DELETE FROM "loans";
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.767278', '2020-12-07 01:29:18.767278');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.767278', '2020-12-07 01:29:18.767278');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.767414', '2020-12-07 01:29:18.767414');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.767414', '2020-12-07 01:29:18.767414');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.767518', '2020-12-07 01:29:18.767518');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.767518', '2020-12-07 01:29:18.767518')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (5009.4ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "books";
+DELETE FROM "loans";
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.775218', '2020-12-07 01:29:18.775218');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.775218', '2020-12-07 01:29:18.775218');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.775294', '2020-12-07 01:29:18.775294');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.775294', '2020-12-07 01:29:18.775294');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.775359', '2020-12-07 01:29:18.775359');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.775359', '2020-12-07 01:29:18.775359')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "books";
+DELETE FROM "loans";
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.758699', '2020-12-07 01:29:18.758699');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.758699', '2020-12-07 01:29:18.758699');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.758807', '2020-12-07 01:29:18.758807');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:18.758807', '2020-12-07 01:29:18.758807');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:18.758901', '2020-12-07 01:29:18.758901');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:18.758901', '2020-12-07 01:29:18.758901')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[36mFixtures Load (5009.3ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "books";
+DELETE FROM "loans";
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:23.803268', '2020-12-07 01:29:23.803268');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:23.803268', '2020-12-07 01:29:23.803268');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:23.803388', '2020-12-07 01:29:23.803388');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:23.803388', '2020-12-07 01:29:23.803388');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:23.803504', '2020-12-07 01:29:23.803504');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:23.803504', '2020-12-07 01:29:23.803504')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mFixtures Load (5011.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "books";
+DELETE FROM "loans";
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:23.795686', '2020-12-07 01:29:23.795686');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:23.795686', '2020-12-07 01:29:23.795686');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:23.795817', '2020-12-07 01:29:23.795817');
+INSERT INTO "books" ("id", "title", "author", "isbn", "published_at", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-11-16', '2020-12-07 01:29:23.795817', '2020-12-07 01:29:23.795817');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (980190962, '2020-12-07 01:29:23.795912', '2020-12-07 01:29:23.795912');
+INSERT INTO "loans" ("id", "created_at", "updated_at") VALUES (298486374, '2020-12-07 01:29:23.795912', '2020-12-07 01:29:23.795912')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m

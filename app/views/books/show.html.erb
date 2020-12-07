@@ -1,0 +1,31 @@
+
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+
+<p>
+  <strong>Isbn:</strong>
+  <%= @book.isbn %>
+</p>
+
+<p>
+  <strong>Editorial:</strong>
+  <%= @book.editorial %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @book.published_at %>
+</p>
+<% if current_user.authorized? %>
+<%= link_to 'Editar', edit_book_path(@book), class:"btn btn-outline-primary" %> |
+<%end%> 
+<%= link_to 'Volver', books_path, class:"btn btn-outline-primary" %> |
+<%= link_to 'Reservar', new_loan_path, class:"btn btn-outline-primary"%>
