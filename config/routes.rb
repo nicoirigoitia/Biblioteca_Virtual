@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   get 'home/about'
 
   root 'books#index'
-  
+ 
 end

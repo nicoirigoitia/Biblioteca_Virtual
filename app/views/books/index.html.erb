@@ -1,6 +1,6 @@
 
 
-<h1>Libros</h1>
+<h1><%= t (".libros") %></h1>
 
 <br>
 
@@ -8,12 +8,12 @@
 <table class="table table-striped table-bordered table-hover">
 <thead class="thead-dark">
 <tr>
-<th>ID Libro</th>
-<th>Titulo</th>
-<th>Autor</th>
-<th>ISBN</th>
-<th>Editorial</th>
-<th>Publicado en</th>
+<th><%= t (".idlibros") %></th>
+<th><%= t (".titulo") %></th>
+<th><%= t (".autor") %></th>
+<th><%= t (".isbn") %></th>
+<th><%= t (".editorial") %></th>
+<th><%= t (".publicado") %></th>
 <% if current_user.present? && current_user.authorized? %> 
   <th colspan="3"></th>
 <% end %>
@@ -30,9 +30,9 @@
   <td><%= book.published_at %></td>
 
   <% if current_user.present? && current_user.authorized? %>      
-        <td><%= link_to 'Ver', book, class:"btn btn-outline-primary" %></td>
-        <td><%= link_to 'Editar', edit_book_path(book), class:"btn btn-outline-primary" %></td>
-        <td><%= link_to 'Borrar', book, class:'btn btn-outline-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to (t (".ver")), book, class:"btn btn-outline-primary" %></td>
+        <td><%= link_to (t (".editar")), edit_book_path(book), class:"btn btn-outline-primary" %></td>
+        <td><%= link_to (t (".borrar")), book, class:'btn btn-outline-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
   <% end %>
       </tr>
 <% end %>
@@ -40,7 +40,7 @@
 </table>
 <br>
 <% if current_user.present? && (current_user.admin? || current_user.is_biblio?) %>
-  <%= link_to 'Nuevo Libro', new_book_path, class:"btn btn-secondary" %>
+  <%= link_to (t (".nuevo")), new_book_path, class:"btn btn-secondary" %>
 <% end %>
 <br>
 <br>

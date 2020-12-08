@@ -5,10 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create(email:'biblio@biblio', password:123456, role:'bibliotecario')
-User.create(email:'estudiante1@gmail', password:123456, role:'estudiante')
-User.create(email:'estudiante2@gmail', password:123456, role:'estudiante')
+User.create(email:'biblio@biblio', name:'carlos', lastname: 'carlin', password:'123456', password_confirmation:'123456', role:'bibliotecario')
+User.create(email:'estudiante1@gmail', name:'nicolas', lastname: 'hdp', password:'123456', password_confirmation:'123456',  role:'estudiante')
+User.create(email:'estudiante2@gmail', name:'antonio', lastname: 'carlin', password:'123456', password_confirmation:'123456', role:'estudiante')
 
-Book.create(title: 'me lo sabia en python', author: 'juan', isbn: '123', published_at: 1000/10/1)
-Book.create(title: 'python para todos', author: 'juan', isbn: '123', published_at: 1000/10/1)
-Book.create(title: 'maldito devise', author: 'juan', isbn: '123', published_at: 1000/10/1)
+Book.create(title: 'me lo sabia en python', editorial: 'uno', author: 'juan', isbn: '123', published_at: 1000/10/1)
+Book.create(title: 'python para todos', editorial: 'dos', author: 'juan', isbn: '123', published_at: 1000/10/1)
+Book.create(title: 'maldito devise', editorial: 'tres', author: 'juan', isbn: '123', published_at: 1000/10/1)

@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-header">
-    <h4>Editar Perfil <% resource_name.to_s.humanize %></h4>
+    <h4><%= t (".editar") %> <% resource_name.to_s.humanize %></h4>
   </div>
   <div class="card-body">
     
@@ -9,8 +9,8 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field form-group">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control", placeholder:"Email" %>
+    <%= f.label (t (".email")) %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control", placeholder:(t ('.email')) %>
   </div>
 
 
@@ -19,26 +19,26 @@
   <% end %>
 
   <div class="field form-group">
-    <%= f.label :password %> <i>(Dejar en blanco si no quiere cambiar la contraseña)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password", class:"form-control", placeholder:"Nueva Contraseña" %>
+    <%= f.label (t ('.contrasena')) %> <i> <%= t ('.mensaje1') %> </i><br />
+    <%= f.password_field :password, autocomplete: "new-password", class:"form-control", placeholder:(t ('.nuevacontra')) %>
     <% if @minimum_password_length %>
       
-      <em><%= @minimum_password_length %> Caracteres como minimo</em>
+      <em><%= @minimum_password_length %> <%= t ('.mensaje2') %></em>
     <% end %>
   </div>
 
   <div class="field form-group">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control", placeholder:"Confirmar contraseña" %>
+    <%= f.label (t ('.confirmcontra')) %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control", placeholder:(t ('.confirmcontra')) %>
   </div>
 
   <div class="field form-group">
-    <%= f.label :current_password %> <i>(Necesitamos tu contraseña actual para confirmar los cambios)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password", class:"form-control", placeholder:"Contraseña actual" %>
+    <%= f.label (t ('.actualcontra')) %> <i><%= t ('.mensaje3') %></i><br />
+    <%= f.password_field :current_password, autocomplete: "current-password", class:"form-control", placeholder:(t ('.actualcontra')) %>
   </div>
 <br/>
   <div class="actions">
-    <%= f.submit "Update", class:'btn btn-secondary' %>
+    <%= f.submit (t ('.actualizar')), class:'btn btn-secondary' %>
   </div>
 <% end %>
   </div>
@@ -46,4 +46,4 @@
 
 <br/>
 
-<%= link_to "Back", :back, class:"btn btn-outline-primary" %>
+<%= link_to (t ('.volver')), :back, class:"btn btn-outline-primary" %>

@@ -31,3 +31,55 @@
 
 en:
   hello: "Hello world"
+  home:
+    header:
+      biblioteca: "Library Isfdyt 210"
+      contacto: "Contact"
+      prestamos: "Loans"
+      editarperfil: "Edit Profile"
+      usuarios: "Users"
+      agregarlibro: "Add Book"
+      salir: "Logout"
+      login: "Login"
+    about:
+      contacto: "Contact"
+      datos_institucionales: "Institutional Dates"
+      horarios_atencion: "Attention schedule"
+      direccion: "Adress"
+      telefono: "Phone"
+      mail: "Email"
+  books:
+    index:
+      libros: "Books"
+      idlibros: "Book ID"
+      titulo: "Tittle"
+      autor: "Author"
+      isbn: "ISBN"
+      editorial: "Editorial"
+      publicado: "Published in"
+      ver: "Show"
+      editar: "Edit"
+      borrar: "Delete"
+      nuevo: "New Book"
+  devise:
+    sessions:
+      new:
+        login: "Log in"
+        email: "Email"
+        contrasena: "Password"
+        recordarme: "Remember me"
+    registrations:
+      edit:
+        editar: "Edit Profile"
+        email: "Email"
+        contrasena: "Password"
+        nuevacontra: "New Password"
+        mensaje1: "(Leave blank if you don't want to change the password)"
+        confirmcontra: "Password Confirmation"
+        mensaje2: "Minimum characters"
+        actualcontra: "Current Password"
+        mensaje3: "(We need your current password to confirm the changes)"
+        actualizar: "Update"
+        volver: "Back"
+
+

@@ -1,0 +1,14 @@
+pt:
+  hello: "Olá Mundo"
+  home:
+    header:
+      biblioteca: "Biblioteca"
+      contacto: "Contato"
+      login: "Login"
+    about:
+      contacto: "Contato"
+      datos_institucionales: "Dados Institucionais"
+      horarios_atencion: "Horários de atenção"
+      direccion: "Endereço"
+      telefono: "Telefone"
+      mail: "Correio eletrônico"

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #613562;">
-  <%= link_to 'Biblioteca Isfdyt 210', root_path, class:"navbar-brand" %>
+  <%= link_to (t (".biblioteca")) , root_path, class:"navbar-brand" %>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -13,29 +13,29 @@
 
          
         <li class="nav-item">
-        <%= link_to "Contacto", home_about_path, class:"nav-link" %>
+        <%= link_to (t (".contacto")), home_about_path, class:"nav-link" %>
         </li> 
                     
         <li class="nav-item">
-        <%= link_to "Prestamos", loans_path, class:"nav-link" %>
+        <%= link_to (t (".prestamos")), loans_path, class:"nav-link" %>
         </li>
         
         <li class="nav-item">
-          <%= link_to "Editar Perfil", edit_user_registration_path, class:"nav-link" %>
+          <%= link_to (t (".editarperfil")), edit_user_registration_path, class:"nav-link" %>
         </li>
   
         <% if current_user.authorized? %>
           <li class="nav-item">
-            <%= link_to "Usuarios", users_path, class:"nav-link" %>
+            <%= link_to (t (".usuarios")), users_path, class:"nav-link" %>
           </li>
 
           <li class="nav-item">
-            <%= link_to "Agregar libro", new_book_path, class:"nav-link" %>
+            <%= link_to (t (".agregarlibro")), new_book_path, class:"nav-link" %>
           </li>
         <% end %>
     
         <li class="nav-item">
-        <%= link_to "Salir", destroy_user_session_path, method: :delete, class:"nav-link" %>
+        <%= link_to (t (".salir")), destroy_user_session_path, method: :delete, class:"nav-link" %>
         </li>
 
        
@@ -43,11 +43,11 @@
       <% else %>
         
       <li class="nav-item">
-        <%= link_to "Contacto", home_about_path, class:"nav-link" %>
+        <%= link_to (t (".contacto")), home_about_path, class:"nav-link" %>
       </li>     
      
         <li class="nav-item">
-          <%= link_to "Loguearse", new_user_session_path, class:"nav-link" %>
+          <%= link_to (t (".login")), new_user_session_path, class:"nav-link" %>
         </li>
 
       <% end %>

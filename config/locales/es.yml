@@ -1,0 +1,53 @@
+es:
+  hello: "Hola Mundo"
+  user:
+  home:
+    header:
+      biblioteca: "Biblioteca Isfdyt 210"
+      contacto: "Contacto"
+      prestamos: "Prestamos"
+      editarperfil: "Editar Perfil"
+      usuarios: "Usuarios"
+      agregarlibro: "Agregar Libro"
+      salir: "Salir"
+      login: "Iniciar sesión"
+    about:
+      contacto: "Contacto"
+      datos_institucionales: "Datos Institucionales"
+      horarios_atencion: "Horarios de atención"
+      direccion: "Dirección"
+      telefono: "Telefono"
+      mail: "Correo electrónico"
+  books:
+    index:
+      libros: "Libros"
+      idlibros: "ID Libro"
+      titulo: "Titulo"
+      autor: "Autor"
+      isbn: "ISBN"
+      editorial: "Editorial"
+      publicado: "Publicado en"
+      ver: "Ver"
+      editar: "Editar"
+      borrar: "Borrar"
+      nuevo: "Nuevo Libro"
+  devise:
+    sessions:
+      new:
+        login: "Ingresar"
+        email: "Email"
+        contrasena: "Contraseña"
+        recordarme: "Recordarme"
+    registrations:
+      edit:
+        editar: "Editar Perfil"
+        email: "Email"
+        contrasena: "Contraseña"
+        nuevacontra: "Nueva Contraseña"
+        mensaje1: "(Deje en blanco si no quiere cambiar la contraseña)"
+        confirmcontra: "Confirmar Contraseña"
+        mensaje2: "Caracteres minimos"
+        actualcontra: "Contraseña Actual"
+        mensaje3: "(Necesitamos tu contraseña actual para confirmar los cambios)"
+        actualizar: "Actualizar"
+        volver: "Volver"
