@@ -4,6 +4,11 @@ pt:
     header:
       biblioteca: "Biblioteca"
       contacto: "Contato"
+      prestamos: "Prestamos"
+      editarperfil: "Editar Perfil"
+      usuarios: "Usuário "
+      agregarlibro: "Adicionar Livro"
+      salir: "Sair"
       login: "Login"
     about:
       contacto: "Contato"
@@ -12,3 +17,36 @@ pt:
       direccion: "Endereço"
       telefono: "Telefone"
       mail: "Correio eletrônico"
+      books:
+    index:
+      libros: "Livros"
+      idlibros: "ID Livro"
+      titulo: "Titulo"
+      autor: "Autor"
+      isbn: "ISBN"
+      editorial: "Editorial"
+      publicado: "Publicado em"
+      ver: "Mostrar"
+      editar: "Editar"
+      borrar: "Excluir"
+      nuevo: "Livro Novo"
+  devise:
+    sessions:
+      new:
+        login: "Login"
+        email: "Email"
+        contrasena: "Contraseña"
+        recordarme: "Recordarme"
+    registrations:
+      edit:
+        editar: "Editar Perfil"
+        email: "Email"
+        contrasena: "Senha"
+        nuevacontra: "Nova Senha"
+        mensaje1: "(Deixe em branco se não quiser mudar a senha)"
+        confirmcontra: "Confirme a Senha"
+        mensaje2: "Caracteres minimos"
+        actualcontra: "Senha Atual"
+        mensaje3: "(Precisamos de sua senha atual para confirmar as alterações)"
+        actualizar: "Atualizar"
+        volver: "Atrás"
